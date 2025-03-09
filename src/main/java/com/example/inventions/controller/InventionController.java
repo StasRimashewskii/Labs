@@ -51,20 +51,6 @@ public class InventionController {
         return ResponseEntity.ok(inventions);
     }
 
-    // GET запрос с Query Parameters: поиск изобретений по имени
-    @GetMapping("/search")
-    public ResponseEntity<List<Invention>> searchInventions(@RequestParam(name = "name", required = false) String name) {
-        List<Invention> inventions = inventionService.getAllInventions();
-        if (name != null && !name.isEmpty()) {
-            inventions = inventions.stream()
-                    .filter(invention -> invention.getName().toLowerCase().contains(name.toLowerCase()))
-                    .toList();
-        }
-        return ResponseEntity.ok(inventions);
-    }
-
-
-
     // POST запрос: добавить новое изобретение
     @PostMapping
     public ResponseEntity<String> addInvention(@RequestBody Invention invention) {
