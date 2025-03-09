@@ -44,12 +44,14 @@ public class InventionController {
     public ResponseEntity<List<Invention>> searchInventions(@RequestParam(name = "name", required = false) String name) {
         List<Invention> inventions = inventionService.getAllInventions();
         if (name != null && !name.isEmpty()) {
+            // Ошибка: использование устаревшего метода stream().toList()
             inventions = inventions.stream()
                     .filter(invention -> invention.getName().toLowerCase().contains(name.toLowerCase()))
-                    .toList();
+                    .toList(); // устаревший метод
         }
         return ResponseEntity.ok(inventions);
     }
+
 
     // POST запрос: добавить новое изобретение
     @PostMapping
