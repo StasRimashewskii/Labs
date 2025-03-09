@@ -50,11 +50,4 @@ public class InventionController {
         }
         return ResponseEntity.ok(inventions);
     }
-
-    // POST запрос: добавить новое изобретение
-    @PostMapping
-    public ResponseEntity<String> addInvention(@RequestBody Invention invention) {
-        inventionService.addInvention(invention);
-        return ResponseEntity.status(HttpStatus.CREATED).body("Новое изобретение добавлено!");
-    }
 }
