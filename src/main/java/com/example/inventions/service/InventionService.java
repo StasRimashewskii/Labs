@@ -41,13 +41,4 @@ public class InventionService {
   public Invention getInventionById(Long id) {
     return inventions.stream().filter(invention -> invention.getId().equals(id)).findFirst().orElse(null);
   }
-
-  /**
-   * Добавление нового изобретения.
-   *
-   * @param invention изобретение для добавления
-   */
-  public void addInvention(Invention invention) {
-    inventions.add(invention);
-  }
 }
