@@ -76,4 +76,5 @@ public class InventionController {
     }
     return ResponseEntity.ok(inventions);
   }
+
 }
