@@ -42,10 +42,7 @@ public class InventionService {
    * @return найденное изобретение или null, если не найдено
    */
   public Invention getInventionById(Long id) {
-    return inventions.stream()
-        .filter(invention -> invention.getId().equals(id))
-        .findFirst()
-        .orElse(null);
+    return inventions.stream().filter(invention -> invention.getId().equals(id)).findFirst().orElse(null);
   }
 
   /**
