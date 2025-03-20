@@ -72,9 +72,7 @@ public class InventionController {
       @RequestParam(name = "name", required = false) String name) {
     List<Invention> inventions = inventionService.getAllInventions();
     if (name != null && !name.isEmpty()) {
-      inventions = inventions.stream()
-      .filter(invention -> invention.getName().toLowerCase().contains(name.toLowerCase()))
-      .toList();
+      inventions = inventions.stream().filter(invention -> invention.getName().toLowerCase().contains(name.toLowerCase())).toList();
     }
     return ResponseEntity.ok(inventions);
   }
