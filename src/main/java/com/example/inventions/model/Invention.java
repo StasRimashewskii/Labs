@@ -1,39 +1,77 @@
 package com.example.inventions.model;
 
+/**
+ * Класс, представляющий изобретение.
+ */
 public class Invention {
-    private Long id;
-    private String name;
-    private String description;
+  private Long id;
+  private String name;
+  private String description;
 
-    // Конструктор
-    public Invention(Long id, String name, String description) {
-        this.id = id;
-        this.name = name;
-        this.description = description;
-    }
+  /**
+   * Конструктор для создания нового изобретения.
+   *
+   * @param id уникальный идентификатор изобретения
+   * @param name название изобретения
+   * @param description описание изобретения
+   */
+  public Invention(Long id, String name, String description) {
+    this.id = id;
+    this.name = name;
+    this.description = description;
+  }
 
-    // Геттеры и сеттеры
-    public Long getId() {
-        return id;
-    }
+  /**
+   * Получает уникальный идентификатор изобретения.
+   *
+   * @return уникальный идентификатор
+   */
+  public Long getId() {
+    return id;
+  }
 
-    public void setId(Long id) {
-        this.id = id;
-    }
+  /**
+   * Устанавливает уникальный идентификатор изобретения.
+   *
+   * @param id уникальный идентификатор
+   */
+  public void setId(Long id) {
+    this.id = id;
+  }
 
-    public String getName() {
-        return name;
-    }
+  /**
+   * Получает название изобретения.
+   *
+   * @return название изобретения
+   */
+  public String getName() {
+    return name;
+  }
 
-    public void setName(String name) {
-        this.name = name;
-    }
+  /**
+     * Устанавливает название изобретения.
+     *
+     * @param name название изобретения
+     */
+  public void setName(String name) {
+    this.name = name;
+  }
 
-    public String getDescription() {
-        return description;
-    }
+  /**
+   * Получает описание изобретения.
+   *
+   * @return описание изобретения
+   */
+  public String getDescription() {
+    return description;
+  }
 
-    public void setDescription(String description) {
-        this.description = description;
-    }
+  /**
+   * Устанавливает описание изобретения.
+   *
+   * @param description описание изобретения
+   */
+  public void setDescription(String description) {
+    this.description = description;
+  }
 }
